@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<style>
+body {
+    background-image: url('https://img.freepik.com/free-photo/grilled-chicken-steak-vegetables-marble-background_1150-45265.jpg?t=st=1721592654~exp=1721596254~hmac=742a76a1f32970b64cd560f2b6648ccad0b43c3b62c56a758f2e0ce1edb78dff&w=740'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .menu-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+</style>
+
+
+<script>
+  let one = 0;
+  let two = 0;
+  let three = 0;
+  let four = 0;
+  let five = 0;
+  let six = 0;
+  let seven = 0;
+  let eight = 0;
+  let nine = 0;
+  let ten = 0;
+  let eleven = 0;
+  let twelve = 0;
+  let thirteen = 0;
+  let fourteen = 0;
+  let fifteen = 0;
+
+  window.addEventListener("load", (event) => {
+    idsList = ["oneshow", "twoshow", "threeshow", "fourshow", "fiveshow", "sixshow", "sevenshow", "eightshow", "nineshow", "tenshow", "elevenshow", "twelveshow", "thirteenshow", "fourteenshow", "fifteenshow"]
+    for(let i=0; i<idsList.length; i++){
+      document.getElementById(idsList[i]).value = 0
+    }
+  });
+  function add(number, id){
+    if(number==10){
+      return 10
+    }
+    number++
+    document.getElementById(id).value = number
+    return number
+  }
+  function remove(number, id){
+    if(number==0){
+      return 0
+    }
+    number--
+    document.getElementById(id).value = number
+    return number
+  }
+
+  function oneadd(){one = add(one, "oneshow")}
+  function twoadd(){two = add(two, "twoshow")}
+  function threeadd(){three = add(three, "threeshow")}
+  function fouradd(){four = add(four, "fourshow")}
+  function fiveadd(){five = add(five, "fiveshow")}
+  function sixadd(){six = add(six, "sixshow")}
+  function sevenadd(){seven = add(seven, "sevenshow")}
+  function eightadd(){eight = add(eight, "eightshow")}
+  function nineadd(){nine = add(nine, "nineshow")}
+  function tenadd(){ten = add(ten, "tenshow")}
+  function elevenadd(){eleven = add(eleven, "elevenshow")}
+  function twelveadd(){twelve = add(twelve, "twelveshow")}
+  function thirteenadd(){thirteen = add(thirteen, "thirteenshow")}
+  function fourteenadd(){fourteen = add(fourteen, "fourteenshow")}
+  function fifteenadd(){fifteen = add(fifteen, "fifteenshow")}
+
+  function oneremove(){one = remove(one, "oneshow")}
+  function tworemove(){two = remove(two, "twoshow")}
+  function threeremove(){three = remove(three, "threeshow")}
+  function fourremove(){four = remove(four, "fourshow")}
+  function fiveremove(){five = remove(five, "fiveshow")}
+  function sixremove(){six = remove(six, "sixshow")}
+  function sevenremove(){seven = remove(seven, "sevenshow")}
+  function eightremove(){eight = remove(eight, "eightshow")}
+  function nineremove(){nine = remove(nine, "nineshow")}
+  function tenremove(){ten = remove(ten, "tenshow")}
+  function elevenremove(){eleven = remove(eleven, "elevenshow")}
+  function twelveremove(){twelve = remove(twelve, "twelveshow")}
+  function thirteenremove(){thirteen = remove(thirteen, "thirteenshow")}
+  function fourteenremove(){fourteen = remove(fourteen, "fourteenshow")}
+  function fifteenremove(){fifteen = remove(fifteen, "fifteenshow")}
+
+  function settotal(){
+    document.getElementById("total").value = 
+      document.getElementById("oneshow").value + "," +
+      document.getElementById("twoshow").value + "," +
+      document.getElementById("threeshow").value + "," +
+      document.getElementById("fourshow").value + "," +
+      document.getElementById("fiveshow").value + "," +
+      document.getElementById("sixshow").value + "," +
+      document.getElementById("sevenshow").value + "," +
+      document.getElementById("eightshow").value + "," +
+      document.getElementById("nineshow").value + "," +
+      document.getElementById("tenshow").value + "," +
+      document.getElementById("elevenshow").value + "," +
+      document.getElementById("twelveshow").value + "," +
+      document.getElementById("thirteenshow").value + "," +
+      document.getElementById("fourteenshow").value + "," +
+      document.getElementById("fifteenshow").value 
+  }
+  
+</script>
+
+</head>
+<body>
+<div>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <div class="w3-right w3-hide-small">
+              <a href="overviewPage" class="w3-bar-item w3-button">HOME</a>
+              <div class="dropdown">
+                <button class="dropbtn">RESTAURANTS 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="All">All</a>
+                    <a href="Sironi">Sironi</a>
+                    <a href="PaulsCafe">Paul's Cafe</a>
+                    <a href="Caffelata">Caffelata</a>
+                </div>
+            </div> 
+            <a href="contact" class="w3-bar-item w3-button">CONTACT</a>
+            </div>
+        </div>
+    </div>
+
+<hr>
+    <div class="w3-row w3-padding-64 menu-section" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h1 class="w3-center">All Main Meals</h1><br>
+        <h4>White Rice with Beans</h4>
+        <p class="w3-text-grey">Get yourself a nutritious meal with the cheapest price  <br><strong><em>Kshs. 250</em></strong></p><br>
+      
+        <h4>Chapati with Githeri</h4>
+        <p class="w3-text-grey">This package comes with 4 Chapatis and Githeri (beans and maize) <br><strong><em>Kshs. 260</em></strong></p><br>
+      
+        <h4>Chips and Fillet</h4>
+        <p class="w3-text-grey">Enjoy the ordinary but with a little style (comes with 2 fillets) <br><strong><em>Kshs. 500</em></strong></p><br>
+      
+        <h4>Mashed Potatoes and Beef Stew</h4>
+        <p class="w3-text-grey">Get yourself some tasty soup with easy-to-chew carbs <br><strong><em>Kshs. 550</em></strong></p><br>
+      
+        <h4>Saffron Rice with Whole Fish</h4>
+        <p class="w3-text-grey">Ever tasted the best rice in West Africa and an entire Fish all in one meal? <br><strong><em>Kshs. 600</em></strong></p><br>
+      
+        <h4>Chicken Pilau</h4>
+        <p class="w3-text-grey">Aromatic rice cooked with tender chicken pieces and a blend of spices. <br><strong><em>Kshs. 250</em></strong></p><br>
+      
+        <h4>Chapati and Beef Stew</h4>
+        <p class="w3-text-grey">Soft, layered chapatis served with a hearty beef stew. <br><strong><em>Kshs. 150</em></strong></p><br>
+      
+        <h4>Vegetable Fried Rice</h4>
+        <p class="w3-text-grey">Stir-fried rice with a colorful mix of fresh vegetables. <br><strong><em>Kshs. 180</em></strong></p><br>
+      
+        <h4>Fresh Fruit Juice</h4>
+        <p class="w3-text-grey">Refreshing juice made from freshly squeezed fruits, available in various flavors. <br><strong><em>Kshs. 100</em></strong></p><br>
+        
+        <h4>Samosa</h4>
+        <p class="w3-text-grey">Crispy pastry filled with spiced minced meat or vegetables. <br><strong><em>Kshs. 50</em></strong></p><br>
+      
+        <h4>Espresso</h4>
+        <p class="w3-text-grey">A rich and intense shot of pure coffee, perfect for a quick caffeine boost.  <br><strong><em>Kshs. 200</em></strong></p><br>
+      
+        <h4>Cappuccino</h4>
+        <p class="w3-text-grey">A delightful blend of espresso and frothy steamed milk. <br><strong><em>Kshs. 250</em></strong></p><br>    
+      
+        <h4>Latte</h4>
+        <p class="w3-text-grey">Smooth and creamy, this classic favorite combines espresso with milk. <br><strong><em>Kshs. 270</em></strong></p><br>
+      
+        <h4>Chocolate Croissant</h4>
+        <p class="w3-text-grey">A buttery, flaky pastry filled with rich, gooey chocolate.
+ <br><strong><em>Kshs. 150</em></strong></p><br>
+      
+        <h4>Blueberry Muffin</h4>
+        <p class="w3-text-grey">Soft and moist muffin bursting with juicy blueberries. <br><strong><em>Kshs. 120</em></strong></p><br>
+      
+      </div>
+    
+      <div class="w3-col l6 w3-padding-large">
+        <button onclick="oneadd()" id="oneadd" style="margin-top:150px;">+</button>
+        <button onclick="oneremove()" id="oneremove">-</button>
+        <input disabled id="oneshow">
+        <br>
+        <button onclick="twoadd()" id="twoadd" style="margin-top:110px">+</button>
+        <button onclick="tworemove()" id="tworemove">-</button>
+        <input disabled id="twoshow">
+        <br>
+        <button onclick="threeadd()" id="threeadd" style="margin-top:110px">+</button>
+        <button onclick="threeremove()" id="threeremove">-</button>
+        <input disabled id="threeshow">
+        <br>
+        <button onclick="fouradd()" id="fouradd" style="margin-top:110px">+</button>
+        <button onclick="fourremove()" id="fourremove">-</button>
+        <input disabled id="fourshow">
+        <br>
+        <button onclick="fiveadd()" id="fiveadd" style="margin-top:110px">+</button>
+        <button onclick="fiveremove()" id="fiveremove">-</button>
+        <input disabled id="fiveshow">
+        <br>
+        <button onclick="sixadd()" id="sixadd" style="margin-top:110px;">+</button>
+        <button onclick="sixremove()" id="sixremove">-</button>
+        <input disabled id="sixshow">
+        <br>
+        <button onclick="sevenadd()" id="sevenadd" style="margin-top:110px">+</button>
+        <button onclick="sevenremove()" id="sevenremove">-</button>
+        <input disabled id="sevenshow">
+        <br>
+        <button onclick="eightadd()" id="eightadd" style="margin-top:110px">+</button>
+        <button onclick="eightremove()" id="eightremove">-</button>
+        <input disabled id="eightshow">
+        <br>
+        <button onclick="nineadd()" id="nineadd" style="margin-top:110px">+</button>
+        <button onclick="nineremove()" id="nineremove">-</button>
+        <input disabled id="nineshow">
+        <br>
+        <button onclick="tenadd()" id="tenadd" style="margin-top:110px">+</button>
+        <button onclick="tenremove()" id="tenremove">-</button>
+        <input disabled id="tenshow">
+        <br>
+        <button onclick="elevenadd()" id="elevenadd" style="margin-top:110px;">+</button>
+        <button onclick="elevenremove()" id="elevenremove">-</button>
+        <input disabled id="elevenshow">
+        <br>
+        <button onclick="twelveadd()" id="twelveadd" style="margin-top:110px">+</button>
+        <button onclick="twelveremove()" id="twelveremove">-</button>
+        <input disabled id="twelveshow">
+        <br>
+        <button onclick="thirteenadd()" id="thirteenadd" style="margin-top:110px">+</button>
+        <button onclick="thirteenremove()" id="thirteenremove">-</button>
+        <input disabled id="thirteenshow">
+        <br>
+        <button onclick="fourteenadd()" id="fourteenadd" style="margin-top:110px">+</button>
+        <button onclick="fourteenremove()" id="fourteenremove">-</button>
+        <input disabled id="fourteenshow">
+        <br>
+        <button onclick="fifteenadd()" id="fifteenadd" style="margin-top:110px">+</button>
+        <button onclick="fifteenremove()" id="fifteenremove">-</button>
+        <input disabled id="fifteenshow">
+        <br>
+        <p style="margin-bottom:15px;"></p>
+        <form action="/calculate4" method="post">
+          <input name="total" id="total" style="display:none">
+          <button onclick="settotal()" id="charge" style="margin-top:15px;width:110px;border:3px solid red;padding:5px;background-color:blue;color:white;border-radius:20px;" type="submit">Get Charges</button>
+        </form>
+      </div>
+
+      <div class="w3-col l6 w3-padding-large">
+      </div>
+    </div>
+
+  <hr>
+</div>
+</div>
+</body>
+</html>

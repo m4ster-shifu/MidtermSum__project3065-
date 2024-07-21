@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Charges</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+
+</head>
+<body>
+<div>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <div class="w3-right w3-hide-small">
+              <a href="overviewPage" class="w3-bar-item w3-button">HOME</a>
+              <div class="dropdown">
+                <button class="dropbtn">RESTAURANTS 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="All">All</a>
+                    <a href="Sironi">Sironi</a>
+                    <a href="PaulsCafe">Paul's Cafe</a>
+                    <a href="Caffelata">Caffelata</a>
+                </div>
+            </div> 
+            <a href="contact" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
+    </div>
+
+<div class="w3-container w3-padding-64" style="overflow-y: auto; height: 800px;" id="contact">
+    <h1>Charges</h1><br>
+    <p class="w3-text-blue-grey w3-large"><b>Charges List</b></p>
+    <form action="mailto:nsalim@usiu.ac.ke">
+
+        <if {{"message"}}>
+            {{message}}
+        </if>
+        
+        <p !{{"message"}}>
+            <div style="float:left;">
+                <p {{#each menu}}>
+                    {{this}}
+                </p {{/each}}>
+            </div>
+            <div style="float:left; margin-left: 1%">
+                <p {{#each prices}}>
+                    @ Kshs. {{this}}
+                </p {{/each}}>
+            </div>
+            <div style="float:left; margin-left: 1%">
+                <p {{#each items}}>
+                    for {{this}} number of items
+                </p {{/each}}>
+            </div>
+            <div style="float:left; margin-left: 1%">
+                <p {{#each total}}>
+                    = Kshs. {{this}}
+                </p {{/each}}>
+            </div>
+        </p>
+
+        <div style="clear:both;">
+            <p style="font-weight: bolder;">Total price: Kshs. {{newtotal}}</p>
+        </div>
+        <p><button class="w3-button w3-light-grey w3-section" type="submit">CHECKOUT</button></p>
+    </form>
+</div>
+</div>
+</body>
+</html>
